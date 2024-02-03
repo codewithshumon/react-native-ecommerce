@@ -24,6 +24,18 @@ const DetailsHeader = ({ data, navigation }) => (
       resizeMode="cover"
       style={{ width: '100%', height: '100%' }}
     />
+
+    <CircleButton
+      imgUrl={assets.left}
+      handlePress={() => navigation.goBack()}
+      left={15}
+      top={StatusBar.currentHeight + 10}
+    />
+    <CircleButton
+      imgUrl={assets.heart}
+      right={15}
+      top={StatusBar.currentHeight + 10}
+    />
   </View>
 );
 
@@ -62,6 +74,10 @@ const Details = ({ route, navigation }) => {
         ListHeaderComponent={() => (
           <>
             <DetailsHeader data={data} navigation={navigation} />
+            <SubInfo />
+            <View style={{ padding: SIZES.font }}>
+              <DetailsDesc data={data} />
+            </View>
           </>
         )}
       />
