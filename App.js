@@ -6,7 +6,6 @@ import {
   StackActions,
 } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
-//import * as Font from 'expo-font';
 
 import Home from './screens/Home';
 import Details from './screens/Details';
